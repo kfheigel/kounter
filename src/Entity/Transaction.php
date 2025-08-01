@@ -80,7 +80,6 @@ class Transaction
         $this->category = $category;
     }
 
-
     public function getAmount(): float
     {
         return $this->amount;
