@@ -29,9 +29,6 @@ class Transaction
     #[ORM\Column(type: 'string', length: 50)]
     private string $category;
 
-    #[ORM\Column(type: 'string', length: 30, nullable: true)]
-    private ?string $action = null;
-
     #[ORM\Column(type: 'float')]
     private float $amount;
 
@@ -82,17 +79,6 @@ class Transaction
     {
         $this->category = $category;
     }
-
-    public function getAction(): ?string
-    {
-        return $this->action;
-    }
-
-    public function setAction(?string $action): void
-    {
-        $this->action = $action;
-    }
-
 
     public function getAmount(): float
     {
